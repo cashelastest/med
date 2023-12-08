@@ -1,0 +1,43 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <title>My Site</title>
+  </head>
+  <body>
+
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style_mobile.css' %}" />
+    <script src="{% static 'js/app.js' %}" defer></script>
+<div>
+  <a href = 'http://127.0.0.1:8000/'><img src="{%static 'img/euromed_logo.jpg' %}" width="200" height="72"></a>
+<a href='http://127.0.0.1:8000/login'><img src = "{%static 'img/login_icon.jpg'%}" width = "50" height="50" align="right" class = 'photo' id = 'login_icon'></a>
+</div>
+<div class="topnav" id="myTopnav">
+      <a class="active" href="http://127.0.0.1:8000/">Головна</a>
+            <a href="http://127.0.0.1:8000/">Про нас</a>
+                  <a href="http://127.0.0.1:8000/">МРТ</a>
+                        <a href="http://127.0.0.1:8000/">Запис</a>
+                        <a href="http://127.0.0.1:8000/">Ціни</a>
+                        <a href="http://127.0.0.1:8000/">Пацієнту</a>
+                        <a href="http://127.0.0.1:8000/">Контакти</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    
+    {%block content%} 
+
+    {%endblock content%}
+        <a href = 'http://127.0.0.1:8000/dashboard/'>dashboard</a>
+               <p> <a href = 'http://127.0.0.1:8000/admin/'>admin</a></p>
+  </body>
+</html>

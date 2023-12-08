@@ -1,0 +1,16 @@
+{% extends "base_mobile.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block content %}
+    <h1>Create an account</h1>
+    <p>Please, sign up using the following form:</p>
+    <form action="." method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Create my account"></p>
+    </form>
+    <h3><p> Уже создали аккаунт?</p></h3>
+
+<h2><p><a href = 'http://127.0.0.1:8000/login/'>Войти</a></p></h2>
+{% endblock %}
